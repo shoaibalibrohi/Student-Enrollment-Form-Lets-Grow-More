@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        Student Enrollment Form
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<h1 class="title">Student Enrollment Form</h1>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name</label><label class="validation-error hide"
+                            id="fullNameValidationError"></label>
+                        <input type="text" placeholder="Name" name="fullName" id="fullName" required>
+
+                    </div>
+                    <div>
+                        <label>Website</label>
+                        <input type="text" placeholder="Website" name="website" id="website" required>
+                    </div>
+                    <div>
+                        <label>Phone No</label>
+                        <input type="text" placeholder="Phone" name="phone" id="phone" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="skills-container">
+                        <label class="skills" >Skills</label>
+                        <div>
+                            <input type="checkbox" id="html" name="skills" value="HTML">
+                            <label for="html">HTML</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="css" name="skills" value="CSS">
+                            <label for="css">CSS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                        
+                        
+                    </div>
+                    
+
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Enroll Student">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <h2>Enrolled Students</h2>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Website</th>
+                            <th>Phone No</th>
+                            <th>Email</th>
+                            <th>Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
